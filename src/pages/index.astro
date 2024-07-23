@@ -1,0 +1,110 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Home">
+  <main class="bg-gray-800 py-7">
+    <div class="bg-black py-7 slider-container">
+      <ul
+        class="flex items-center justify-center md-justify-start li-mx-8 img-max-w-none infinite-scroll"
+      >
+        <li>
+          <img src="/clouds/facebook.svg" alt="Facebook" />
+        </li>
+        <li>
+          <img src="/clouds/disney.svg" alt="Disney" />
+        </li>
+        <li>
+          <img src="/clouds/airbnb.svg" alt="Airbnb" />
+        </li>
+        <li>
+          <img src="/clouds/apple.svg" alt="Apple" />
+        </li>
+        <li>
+          <img src="/clouds/spark.svg" alt="Spark" />
+        </li>
+        <li>
+          <img src="/clouds/samsung.svg" alt="Samsung" />
+        </li>
+        <li>
+          <img src="/clouds/quora.svg" alt="Quora" />
+        </li>
+        <li>
+          <img src="/clouds/sass.svg" alt="Sass" />
+        </li>
+      </ul>
+      <ul
+        class="flex items-center justify-center md-justify-start li-mx-8 img-max-w-none infinite-scroll"
+        aria-hidden="true"
+      >
+        <li>
+          <img src="/clouds/facebook.svg" alt="Facebook" />
+        </li>
+        <li>
+          <img src="/clouds/disney.svg" alt="Disney" />
+        </li>
+        <li>
+          <img src="/clouds/airbnb.svg" alt="Airbnb" />
+        </li>
+        <li>
+          <img src="/clouds/apple.svg" alt="Apple" />
+        </li>
+        <li>
+          <img src="/clouds/spark.svg" alt="Spark" />
+        </li>
+        <li>
+          <img src="/clouds/samsung.svg" alt="Samsung" />
+        </li>
+        <li>
+          <img src="/clouds/quora.svg" alt="Quora" />
+        </li>
+        <li>
+          <img src="/clouds/sass.svg" alt="Sass" />
+        </li>
+      </ul>
+    </div>
+  </main>
+</MainLayout>
+
+<style>
+  .slider-container {
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: nowrap;
+  }
+  .slider-ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .md-justify-start {
+      justify-content: flex-start;
+    }
+  }
+
+  .li-mx-8 li {
+    margin-left: 2rem; /* 32px */
+    margin-right: 2rem; /* 32px */
+  }
+
+  .img-max-w-none img {
+    max-width: none;
+  }
+
+  /* Define the keyframes for the infinite scroll animation */
+  @keyframes infinite-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* Apply the animation to an element with the class .infinite-scroll */
+  .infinite-scroll {
+    animation: infinite-scroll 25s linear infinite;
+  }
+</style>
